@@ -13,6 +13,6 @@ public interface Sujeto {
     
     public void registrarObservador(Observador o);
     public void retirarObservador(Observador o);
-    public void notificarObservadores();
+    public void notificarObservadores(String nombreProducto,double precio,int unidades);
     
 }

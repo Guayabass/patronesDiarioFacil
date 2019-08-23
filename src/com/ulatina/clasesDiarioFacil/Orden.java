@@ -18,8 +18,6 @@ public class Orden {
     private Factura fact = new Factura();
     private List<Producto> productos = new ArrayList<>();
     private double total;
-    private double pagaCon;
-    private double cambio;
     private String piePagina;
     
     public Orden(){
@@ -43,18 +41,7 @@ public class Orden {
     public void setFact(Factura fact) {
         this.fact = fact;
     }
-    
-    
-    
-    public Orden(Factura fact,double pagaCon){
-        
-       
-        this.fact = fact;
-        this.pagaCon = pagaCon;
-        
-        
-    }
-    
+     
    public List<Producto> getProductos(){
        return productos;
    }
@@ -62,23 +49,7 @@ public class Orden {
     public void agregarProducto(Producto producto){
         this.productos.add(producto);
     }
-     
-    public double getPagaCon(){
-        this.pagaCon = 10000;
-        return this.pagaCon;
-    }
-    
-    public void setPagaCon(double pagaCon){
-        this.pagaCon = pagaCon;
-    }
-    
-    public double getCambio(){
-        
-        this.cambio = this.getPagaCon() - this.getTotal();
-        
-        return this.cambio;
-    }
-    
+      
     public String getPiePagina(){
 
         this.piePagina = "Gracias por su compra.";
@@ -121,8 +92,7 @@ public class Orden {
         StringBuffer sb = new StringBuffer();
       
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/YY");
-      
-      
+     
       sb.append("\n*******************************************************************************************\n");
       sb.append("No.Orden: " + this.getFact().getNumeroOrden());
       sb.append("\n");
@@ -136,8 +106,6 @@ public class Orden {
               sb.append(p + "\n");
       }
       
-      
-      System.out.println(fact.getFecha());
       sb.append("\n*******************************************************************************************\n");
       sb.append("\n");
       sb.append("Total: " + this.getTotal());

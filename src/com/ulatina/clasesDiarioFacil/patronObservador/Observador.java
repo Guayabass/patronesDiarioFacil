@@ -5,8 +5,6 @@
  */
 package com.ulatina.clasesDiarioFacil.patronObservador;
 
-import com.ulatina.clasesDiarioFacil.Categoria;
-import java.util.Date;
 
 /**
  *

@@ -280,14 +280,13 @@ public class Sistema implements iSistema{
         
         for(Object obj: sp.selectAll()){
             if (((Producto)obj).getCantidad()<=5){
-            ((Producto)obj).notificarObservadores();
+            ((Producto)obj).notificarObservadores(((Producto)obj).getNombreProducto(),((Producto)obj).getPrecioProducto(),20);
         }
         
         if(cantidad>=5){
             this.clienteIngresado.setTipoCliente("VIP");
         }
-        
-         
+             
     }
     }
     

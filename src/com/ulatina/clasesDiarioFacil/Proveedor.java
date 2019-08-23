@@ -7,7 +7,7 @@ package com.ulatina.clasesDiarioFacil;
 
 import com.ulatina.clasesDiarioFacil.Email.Email;
 import com.ulatina.clasesDiarioFacil.patronObservador.Observador;
-import java.util.Date;
+
 
 /**
  *
